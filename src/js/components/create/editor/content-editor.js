@@ -24,7 +24,7 @@ export default function ContentEditor() {
       skyid.setJSON(posts, data, function (response) {
         console.log(data);
         if (response !== true) {
-          alert("Sorry, skyid.setFile failed :(");
+          alert("Sorry, skyid.setJSON failed :(");
         } else {
           console.log("Post List Updated");
         }
@@ -72,7 +72,7 @@ export default function ContentEditor() {
 
     skyid.setJSON(fileName, serializedPost, function (response) {
       if (response !== true) {
-        alert("Sorry, skyid.setFile failed :(");
+        alert("Sorry, skyid.setJSON failed :(");
       } else {
         setToast({ message: "Post Created" });
         writeToPostList(serializedPost);
@@ -85,7 +85,7 @@ export default function ContentEditor() {
     //     console.log("Creating New Post")
     //     skyid.setJSON(fileName, serializedPost, function(response) {
     //       if (response !== true) {
-    //         alert("Sorry, skyid.setFile failed :(");
+    //         alert("Sorry, skyid.setJSON failed :(");
     //       }else{
     //         setToast({message: "Post Created"});
     //         writeToPostList();

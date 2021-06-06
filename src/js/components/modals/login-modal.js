@@ -37,7 +37,7 @@ export default function LoginModal() {
             console.info("NO CONFIG -> CREATING NOW :)")
             skyid.setJSON("config.json", newConfig, function(response) {
               if (response !== true) {
-                alert("Sorry, skyid.setFile failed :(");
+                alert("Sorry, skyid.setJSON failed :(");
                 setConfig({"version": "ERROR"})
               }else{
                 setToast({message: "Created User config.json"});

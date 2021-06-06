@@ -2,7 +2,7 @@ import buildSkyID from "./skyid";
 
 export function getData(filename, setDataFunc) {
     let skyid =  buildSkyID()
-    return skyid.getFile(filename, function (response, revision) {
+    return skyid.getJSON(filename, function (response, revision) {
         if (response === "") {
             // file not found
             console.log("NO FILE");
@@ -25,7 +25,7 @@ export function setData(filename, data) {
     console.log("Adding Data");
     return skyid.setJSON(filename, jsonData, function (response) {
         if (response !== true) {
-          alert("Sorry, skyid.setFile failed :(");
+          alert("Sorry, skyid.setJSON failed :(");
         }
         console.log(response);
         return response
